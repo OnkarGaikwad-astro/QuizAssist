@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Quiz GPT",
+  "version": "1.0",
+  "description": "Learning extension",
+
+  "permissions": ["activeTab", "scripting", "contextMenus"],
+
+  "host_permissions": [
+    "*://docs.google.com/forms/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_title": "Quiz GPT"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/forms/*"],
+      "js": ["functions.js"]
+    }
+  ],
+
+ "commands": {
+    "getAnswers": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "windows": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Get Answers"
+    },
+    "toggleAnswers": {
+      "suggested_key": {
+        "default": "Alt+X",
+        "windows": "Alt+X",
+        "mac": "MacCtrl+Shift+H"
+      },
+      "description": "Show/Hide Answers"
+    },
+    "eraseAnswers": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "windows": "Ctrl+Shift+E",
+        "mac": "MacCtrl+Shift+E"
+      },
+      "description": "Erase Answers"
+    }
+  },
+
+  "icons": {
+    "128": "logo.png"
+  }
+}
