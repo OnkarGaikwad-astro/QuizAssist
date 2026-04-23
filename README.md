@@ -1,4 +1,4 @@
-# Quiz GPT (Gemini Edition) ⚡
+# Quiz GPT (Gemini Edition) 
 
 A Chrome extension that automatically reads Google Form quizzes, generates answers using AI (Gemini), and fills them — with **stealth display options** so answers aren’t obvious.
 
@@ -13,7 +13,7 @@ A Chrome extension that automatically reads Google Form quizzes, generates answe
 * 🎯 Auto-fills answers (MCQ, dropdown, etc.)
 * 🕶️ Stealth mode:
 
-  * Inline answers like `(2)`
+  * Inline answers like `Question (2)`
   * Hidden / subtle display
 * ⌨️ Keyboard shortcut (Alt + X) to toggle visibility
 
